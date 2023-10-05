@@ -1,0 +1,12 @@
+{
+  "extends": "expo/tsconfig.base",
+  "include": ["./src/**/*"],
+  "compilerOptions": {
+    "strict": true,
+    "baseUrl": ".",
+    "module": "CommonJS",
+    "paths": {
+      "~root/*": ["./src/*"]
+    }
+  }
+}
