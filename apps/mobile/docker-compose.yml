@@ -7,17 +7,5 @@ services:
       target: development
     ports:
       - "41101:41101"
-    depends_on:
-      - mongodb
     volumes:
-      - .:/app/.
-
-  mongodb:
-    image: mongo:latest
-    ports:
-      - "27017:27017"
-    volumes:
-      - mongodb-data:/data/db
-
-volumes:
-  mongodb-data:
+      - .:/app
