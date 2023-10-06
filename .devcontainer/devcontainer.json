@@ -8,7 +8,7 @@
     "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
   },
 
-  "postCreateCommand": "sudo chown node: /var/run/docker*.sock && sudo usermod -aG docker $USER && docker compose -f /workspaces/apps/api/docker-compose.yml up -d && docker compose -f /workspaces/apps/mobile/docker-compose.yml up -d && sudo chmod +x /workspaces/.dev/dev.sh && sudo ln -s /workspaces/.dev/dev.sh /usr/local/bin/dev",
+  "postCreateCommand": "sudo chown node: /var/run/docker*.sock && sudo usermod -aG docker $USER && sudo chmod +x /workspaces/.dev/dev.sh && sudo ln -s /workspaces/.dev/dev.sh /usr/local/bin/dev",
 
   "shutdownAction": "stopCompose"
 }

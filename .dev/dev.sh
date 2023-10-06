@@ -11,6 +11,9 @@ if [[ "$1" == "down" ]] && [[ "$2" == "del" ]]; then
 fi
 
 if [[ "$1" == "up" ]]; then
+## install parent folder packages
+npm ci
+
   ## run development stack
   docker compose -f /workspaces/apps/api/docker-compose.yml up -d --remove-orphans --timestamps $OPT_BUILD
 

@@ -6,11 +6,11 @@ services:
       dockerfile: Dockerfile
       target: development
     ports:
-      - "41101:41101"
+      - "41100:41100"
     depends_on:
       - mongodb
     volumes:
-      - .:/app/.
+      - .:/app
 
   mongodb:
     image: mongo:latest
